@@ -369,7 +369,7 @@ sub startup {
         $r->get('/(:user).keys' => sub { shift->render_maybe('/user-keys') });
         
         # User
-        my $r = $r->route('/:user');
+        my $r = $r->any('/:user');
         {
           # Home
           $r->get('/' => [format => 0] => sub { shift->render_maybe('/user') });
@@ -383,7 +383,7 @@ sub startup {
         
         # Smart HTTP
         {
-          my $r = $r->route('/(#project).git');
+          my $r = $r->any('/(#project).git');
           
           {
             my $r = $r->under(sub {
@@ -446,7 +446,7 @@ sub startup {
                 
         # Project
         {
-          my $r = $r->route('/#project');
+          my $r = $r->any('/#project');
           
           {
             my $r = $r->under(sub {
@@ -574,7 +574,7 @@ sub startup {
             
             # Settings
             {
-              my $r = $r->route('/settings')->to(tab => 'settings');
+              my $r = $r->any('/settings')->to(tab => 'settings');
               
               # Settings
               $r->any('/' => sub { shift->render_maybe('/settings') });
@@ -588,7 +588,7 @@ sub startup {
             
             # Network
             {
-              my $r = $r->route('/network')->to(tab => 'graph');
+              my $r = $r->any('/network')->to(tab => 'graph');
               
               # Network
               $r->get('/' => sub { shift->render_maybe('/network') });
