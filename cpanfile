@@ -8,7 +8,7 @@ requires 'Validator::Custom', '== 1.0201';
 requires 'Config::Tiny', '== 2.23';
 requires 'Data::Page', '== 2.02';
 requires 'Data::Page::Navigation', '== 0.06';
-requires 'Mojolicious', '== 9.10';
+requires 'Mojolicious', '== 9.11';
 requires 'Mojolicious::Plugin::BasicAuth', '== 0.08';
 requires 'Mojolicious::Plugin::AutoRoute', '== 0.23';
 requires 'Mojolicious::Plugin::INIConfig', '== 0.06';

@@ -22,7 +22,7 @@ use Time::Moment;
   eval {require Digest::SHA; import Digest::SHA qw(sha1 sha1_hex)};
 }
 
-our $VERSION = 'v2.6.1';
+our $VERSION = 'v2.6.2';
 
 our $user_re = qr/[a-zA-Z0-9\-]+/;
 our $project_re = qr/[a-zA-Z0-9_\-\.]+/;
